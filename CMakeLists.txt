@@ -24,8 +24,11 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 message(STATUS "'${CMAKE_BUILD_TYPE}' built type was selected.")
 
+# set src/ as source subdirectory
+set(PROJECT_SOURCE_SUBDIR ${PROJECT_SOURCE_DIR}/src)
+
 # add include directories
-include_directories(SYSTEM "${PROJECT_SOURCE_DIR}/src")
+include_directories("${PROJECT_SOURCE_SUBDIR}")
 
 # add compiler flags to optimize in release mode
 set(CMAKE_CXX_RELEASE_FLAGS "${CMAKE_CXX_FLAGS} -O2")
@@ -33,3 +36,24 @@ set(CMAKE_CXX_RELEASE_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 # add compiler flags to enable strict compilation in debug mode
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 --coverage")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -pedantic")
+
+# add all header files
+set(HEADERS
+    ${PROJECT_SOURCE_SUBDIR}/Model/Category.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Model/Image.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Model/Project.hpp
+)
+
+# add all source files
+set(SOURCES
+    ${PROJECT_SOURCE_SUBDIR}/main.cpp
+)
+
+# add object files to be compiled and bundled into executable
+add_executable(phogro ${HEADERS} ${SOURCES})
+
+# add external linked libraries
+target_link_libraries(phogro)
+
+# add rule to install public header file
+install(TARGETS phogro RUNTIME DESTINATION bin)
