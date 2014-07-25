@@ -48,6 +48,9 @@ set(HEADERS
     ${PROJECT_SOURCE_SUBDIR}/Model/Category.hpp
     ${PROJECT_SOURCE_SUBDIR}/Model/Image.hpp
     ${PROJECT_SOURCE_SUBDIR}/Model/Project.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Presenter/CategoryPresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Presenter/ImagePresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Presenter/ProjectPresenter.hpp
 )
 
 # add all source files
