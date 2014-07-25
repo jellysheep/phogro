@@ -10,10 +10,12 @@
 #if !defined PROJECT_HPP_INCLUDED
 #define PROJECT_HPP_INCLUDED
 
+#include <QString>
+
 namespace Model {
 
-class Project {
-
+struct Project {
+    QString name;
 };
 
 } /* namespace Model */

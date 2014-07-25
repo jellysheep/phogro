@@ -10,10 +10,12 @@
 #if !defined CATEGORY_HPP_INCLUDED
 #define CATEGORY_HPP_INCLUDED
 
+#include <QString>
+
 namespace Model {
 
-class Category {
-
+struct Category {
+    QString name;
 };
 
 } /* namespace Model */

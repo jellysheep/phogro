@@ -10,10 +10,12 @@
 #if !defined IMAGE_HPP_INCLUDED
 #define IMAGE_HPP_INCLUDED
 
+#include <QString>
+
 namespace Model {
 
-class Image {
-
+struct Image {
+    QString filename;
 };
 
 } /* namespace Model */
