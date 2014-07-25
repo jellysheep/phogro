@@ -51,6 +51,9 @@ set(HEADERS
     ${PROJECT_SOURCE_SUBDIR}/Presenter/CategoryPresenter.hpp
     ${PROJECT_SOURCE_SUBDIR}/Presenter/ImagePresenter.hpp
     ${PROJECT_SOURCE_SUBDIR}/Presenter/ProjectPresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/View/CategoryView.hpp
+    ${PROJECT_SOURCE_SUBDIR}/View/ImageView.hpp
+    ${PROJECT_SOURCE_SUBDIR}/View/ProjectView.hpp
 )
 
 # add all source files
