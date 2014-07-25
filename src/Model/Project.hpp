@@ -7,8 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
-#if !defined CATEGORY_HPP_INCLUDED
-#define CATEGORY_HPP_INCLUDED
+#if !defined PROJECT_HPP_INCLUDED
+#define PROJECT_HPP_INCLUDED
 
 namespace Model {
 
@@ -18,4 +18,4 @@ class Project {
 
 } /* namespace Model */
 
-#endif /* !defined CATEGORY_HPP_INCLUDED */
+#endif /* !defined PROJECT_HPP_INCLUDED */
