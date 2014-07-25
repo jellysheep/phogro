@@ -7,6 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
+#include <QtPlugin>
+
 #if !defined IPROJECT_PRESENTER_HPP_INCLUDED
 #define IPROJECT_PRESENTER_HPP_INCLUDED
 
@@ -16,5 +18,8 @@ class IProjectPresenter {
 };
 
 } /* namespace Interfaces */
+
+Q_DECLARE_INTERFACE(Interfaces::IProjectPresenter,
+    "Interfaces::IProjectPresenter")
 
 #endif /* !defined IPROJECT_PRESENTER_HPP_INCLUDED */

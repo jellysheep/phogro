@@ -7,6 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
+#include <QtPlugin>
+
 #if !defined IIMAGE_VIEW_HPP_INCLUDED
 #define IIMAGE_VIEW_HPP_INCLUDED
 
@@ -16,5 +18,8 @@ class IImageView {
 };
 
 } /* namespace Interfaces */
+
+Q_DECLARE_INTERFACE(Interfaces::IImageView,
+    "Interfaces::IImageView")
 
 #endif /* !defined IIMAGE_VIEW_HPP_INCLUDED */

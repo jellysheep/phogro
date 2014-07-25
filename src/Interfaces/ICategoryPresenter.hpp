@@ -7,6 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
+#include <QtPlugin>
+
 #if !defined ICATEGORY_PRESENTER_HPP_INCLUDED
 #define ICATEGORY_PRESENTER_HPP_INCLUDED
 
@@ -16,5 +18,8 @@ class ICategoryPresenter {
 };
 
 } /* namespace Interfaces */
+
+Q_DECLARE_INTERFACE(Interfaces::ICategoryPresenter,
+    "Interfaces::ICategoryPresenter")
 
 #endif /* !defined ICATEGORY_PRESENTER_HPP_INCLUDED */

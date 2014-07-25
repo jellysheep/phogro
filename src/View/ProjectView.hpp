@@ -10,13 +10,20 @@
 #if !defined PROJECT_VIEW_HPP_INCLUDED
 #define PROJECT_VIEW_HPP_INCLUDED
 
+#include <QObject>
+
+#include "Interfaces/IProjectView.hpp"
 #include "Interfaces/IProjectPresenter.hpp"
 
 namespace View {
 
-class ProjectView {
+class ProjectView : public QObject, public Interfaces::IProjectView {
+    Q_OBJECT
+    Q_INTERFACES(Interfaces::IProjectView)
+
 private:
     Interfaces::IProjectPresenter *categoryPresenter;
+
 };
 
 } /* namespace View */

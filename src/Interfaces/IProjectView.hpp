@@ -7,6 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
+#include <QtPlugin>
+
 #if !defined IPROJECT_VIEW_HPP_INCLUDED
 #define IPROJECT_VIEW_HPP_INCLUDED
 
@@ -16,5 +18,8 @@ class IProjectView {
 };
 
 } /* namespace Interfaces */
+
+Q_DECLARE_INTERFACE(Interfaces::IProjectView,
+    "Interfaces::IProjectView")
 
 #endif /* !defined IPROJECT_VIEW_HPP_INCLUDED */

@@ -7,6 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
+#include <QtPlugin>
+
 #if !defined IIMAGE_PRESENTER_HPP_INCLUDED
 #define IIMAGE_PRESENTER_HPP_INCLUDED
 
@@ -16,5 +18,8 @@ class IImagePresenter {
 };
 
 } /* namespace Interfaces */
+
+Q_DECLARE_INTERFACE(Interfaces::IImagePresenter,
+    "Interfaces::IImagePresenter")
 
 #endif /* !defined IIMAGE_PRESENTER_HPP_INCLUDED */

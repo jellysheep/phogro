@@ -10,15 +10,22 @@
 #if !defined CATEGORY_PRESENTER_HPP_INCLUDED
 #define CATEGORY_PRESENTER_HPP_INCLUDED
 
+#include <QObject>
+
 #include "Model/Category.hpp"
 #include "Interfaces/ICategoryView.hpp"
+#include "Interfaces/ICategoryPresenter.hpp"
 
 namespace Presenter {
 
-class CategoryPresenter {
+class CategoryPresenter : public QObject, public Interfaces::ICategoryPresenter {
+    Q_OBJECT
+    Q_INTERFACES(Interfaces::ICategoryPresenter)
+
 private:
     Model::Category *categoryModel;
     Interfaces::ICategoryView *categoryView;
+
 };
 
 } /* namespace Presenter */

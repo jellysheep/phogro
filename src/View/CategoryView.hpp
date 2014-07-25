@@ -10,13 +10,20 @@
 #if !defined CATEGORY_VIEW_HPP_INCLUDED
 #define CATEGORY_VIEW_HPP_INCLUDED
 
+#include <QObject>
+
+#include "Interfaces/ICategoryView.hpp"
 #include "Interfaces/ICategoryPresenter.hpp"
 
 namespace View {
 
-class CategoryView {
+class CategoryView : public QObject, public Interfaces::ICategoryView {
+    Q_OBJECT
+    Q_INTERFACES(Interfaces::ICategoryView)
+
 private:
     Interfaces::ICategoryPresenter *categoryPresenter;
+
 };
 
 } /* namespace View */

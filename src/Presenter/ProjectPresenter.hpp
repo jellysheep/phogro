@@ -10,15 +10,22 @@
 #if !defined PROJECT_PRESENTER_HPP_INCLUDED
 #define PROJECT_PRESENTER_HPP_INCLUDED
 
+#include <QObject>
+
 #include "Model/Project.hpp"
 #include "Interfaces/IProjectView.hpp"
+#include "Interfaces/IProjectPresenter.hpp"
 
 namespace Presenter {
 
-class ProjectPresenter {
+class ProjectPresenter : public QObject, public Interfaces::IProjectPresenter {
+    Q_OBJECT
+    Q_INTERFACES(Interfaces::IProjectPresenter)
+
 private:
     Model::Project *projectModel;
     Interfaces::IProjectView *projectView;
+
 };
 
 } /* namespace Presenter */

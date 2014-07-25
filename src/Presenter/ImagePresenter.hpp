@@ -10,15 +10,22 @@
 #if !defined IMAGE_PRESENTER_HPP_INCLUDED
 #define IMAGE_PRESENTER_HPP_INCLUDED
 
+#include <QObject>
+
 #include "Model/Image.hpp"
 #include "Interfaces/IImageView.hpp"
+#include "Interfaces/IImagePresenter.hpp"
 
 namespace Presenter {
 
-class ImagePresenter {
+class ImagePresenter : public QObject, public Interfaces::IImagePresenter {
+    Q_OBJECT
+    Q_INTERFACES(Interfaces::IImagePresenter)
+
 private:
     Model::Image *imageModel;
     Interfaces::IImageView *imageView;
+
 };
 
 } /* namespace Presenter */

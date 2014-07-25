@@ -7,6 +7,8 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
+#include <QtPlugin>
+
 #if !defined ICATEGORY_VIEW_HPP_INCLUDED
 #define ICATEGORY_VIEW_HPP_INCLUDED
 
@@ -16,5 +18,8 @@ class ICategoryView {
 };
 
 } /* namespace Interfaces */
+
+Q_DECLARE_INTERFACE(Interfaces::ICategoryView,
+    "Interfaces::ICategoryView")
 
 #endif /* !defined ICATEGORY_VIEW_HPP_INCLUDED */
