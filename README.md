@@ -17,7 +17,15 @@ Later you can export the photos into directories specified by their categories.
 PhoGro is designed as an object-oriented software according to the MVP pattern.
 It uses the C++ language and Qt library to provide platform independent usability.
 
-## Coding style
+### Build instructions
+
+Dependencies of PhoGro are Qt5 and CMake. Compile using these commands:
+* `mkdir -p build`
+* `cd build`
+* `cmake ../`
+* `make`
+
+### Coding style
 
 See [`CODING_STYLE.md`](CODING_STYLE.md) file for details about coding style of
 this project.
