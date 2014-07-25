@@ -37,6 +37,12 @@ set(CMAKE_CXX_RELEASE_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 --coverage")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -pedantic")
 
+# activate automatic meta object compiler
+set(CMAKE_AUTOMOC ON)
+
+# find and add Qt library
+find_package(Qt5Core REQUIRED)
+
 # add all header files
 set(HEADERS
     ${PROJECT_SOURCE_SUBDIR}/Model/Category.hpp
@@ -52,7 +58,10 @@ set(SOURCES
 # add object files to be compiled and bundled into executable
 add_executable(phogro ${HEADERS} ${SOURCES})
 
-# add external linked libraries
+# add Qt linked libraries
+qt5_use_modules(phogro Core)
+
+# add other external linked libraries
 target_link_libraries(phogro)
 
 # add rule to install public header file

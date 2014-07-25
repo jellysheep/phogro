@@ -7,9 +7,11 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
-/** Start main components of PhoGro. */
+#include <QCoreApplication>
 
+/** Start main components of PhoGro. */
 int main(int argc, char** argv)
 {
-    return 0;
+    QCoreApplication app(argc, argv);
+    return app.exec();
 }
