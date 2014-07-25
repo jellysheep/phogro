@@ -17,6 +17,11 @@ Later you can export the photos into directories specified by their categories.
 PhoGro is designed as an object-oriented software according to the MVP pattern.
 It uses the C++ language and Qt library to provide platform independent usability.
 
+## Coding style
+
+See [`CODING_STYLE.md`](CODING_STYLE.md) file for details about coding style of
+this project.
+
 ## License
 
 PhoGro is released under the BSD 3-Clause License.
