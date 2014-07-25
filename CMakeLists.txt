@@ -48,15 +48,18 @@ set(HEADERS
     ${PROJECT_SOURCE_SUBDIR}/Model/Category.hpp
     ${PROJECT_SOURCE_SUBDIR}/Model/Image.hpp
     ${PROJECT_SOURCE_SUBDIR}/Model/Project.hpp
-    ${PROJECT_SOURCE_SUBDIR}/Presenter/CategoryPresenter.hpp
-    ${PROJECT_SOURCE_SUBDIR}/Presenter/ImagePresenter.hpp
-    ${PROJECT_SOURCE_SUBDIR}/Presenter/ProjectPresenter.hpp
     ${PROJECT_SOURCE_SUBDIR}/View/CategoryView.hpp
     ${PROJECT_SOURCE_SUBDIR}/View/ImageView.hpp
     ${PROJECT_SOURCE_SUBDIR}/View/ProjectView.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Presenter/CategoryPresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Presenter/ImagePresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Presenter/ProjectPresenter.hpp
     ${PROJECT_SOURCE_SUBDIR}/Interfaces/ICategoryView.hpp
     ${PROJECT_SOURCE_SUBDIR}/Interfaces/IImageView.hpp
     ${PROJECT_SOURCE_SUBDIR}/Interfaces/IProjectView.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Interfaces/ICategoryPresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Interfaces/IImagePresenter.hpp
+    ${PROJECT_SOURCE_SUBDIR}/Interfaces/IProjectPresenter.hpp
 )
 
 # add all source files
