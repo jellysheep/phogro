@@ -11,12 +11,14 @@
 #define CATEGORY_PRESENTER_HPP_INCLUDED
 
 #include "Model/Category.hpp"
+#include "Interfaces/ICategoryView.hpp"
 
 namespace Presenter {
 
 class CategoryPresenter {
 private:
     Model::Category *categoryModel;
+    Interfaces::ICategoryView *categoryView;
 };
 
 } /* namespace Presenter */

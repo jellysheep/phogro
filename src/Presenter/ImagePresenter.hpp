@@ -11,12 +11,14 @@
 #define IMAGE_PRESENTER_HPP_INCLUDED
 
 #include "Model/Image.hpp"
+#include "Interfaces/IImageView.hpp"
 
 namespace Presenter {
 
 class ImagePresenter {
 private:
     Model::Image *imageModel;
+    Interfaces::IImageView *imageView;
 };
 
 } /* namespace Presenter */

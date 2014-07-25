@@ -11,12 +11,14 @@
 #define PROJECT_PRESENTER_HPP_INCLUDED
 
 #include "Model/Project.hpp"
+#include "Interfaces/IProjectView.hpp"
 
 namespace Presenter {
 
 class ProjectPresenter {
 private:
     Model::Project *projectModel;
+    Interfaces::IProjectView *projectView;
 };
 
 } /* namespace Presenter */
