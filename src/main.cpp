@@ -7,11 +7,16 @@
  * Full license text is under the file "LICENSE" provided with this code.
  */
 
-#include <QCoreApplication>
+#include <QApplication>
+#include <QQmlApplicationEngine>
 
 /** Start main components of PhoGro. */
 int main(int argc, char** argv)
 {
-    QCoreApplication app(argc, argv);
+    QApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load(QUrl(QStringLiteral("qrc:///MainWindow.qml")));
+
     return app.exec();
 }

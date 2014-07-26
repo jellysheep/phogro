@@ -2,6 +2,9 @@
 # define executable application project
 TEMPLATE    =   app
 
+# set necessary Qt modules
+QT          +=  qml quick widgets
+
 # add include search path
 INCLUDEPATH +=  src/
 
@@ -27,6 +30,9 @@ HEADERS     +=  src/Interfaces/ICategoryView.hpp \
 
 # add project source files
 SOURCES     +=  src/main.cpp
+
+# add project resources
+RESOURCES   +=  UI/qml.qrc
 
 # set executable name
 TARGET      =   phogro
