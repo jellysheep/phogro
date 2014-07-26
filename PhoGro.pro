@@ -5,10 +5,10 @@ TEMPLATE    =   app
 # set necessary Qt modules
 QT          +=  qml quick widgets
 
-# add include search path
+# set include search path
 INCLUDEPATH +=  src/
 
-# add project header files
+# set project header files
 HEADERS     +=  src/Model/Category.hpp \
                 src/Model/Image.hpp \
                 src/Model/Project.hpp
@@ -28,11 +28,19 @@ HEADERS     +=  src/Interfaces/ICategoryView.hpp \
                 src/Interfaces/IImagePresenter.hpp \
                 src/Interfaces/IProjectPresenter.hpp
 
-# add project source files
+# set project source files
 SOURCES     +=  src/main.cpp
 
-# add project resources
+# set project resources
 RESOURCES   +=  UI/qml.qrc
+
+# set debug build flags
+QMAKE_LFLAGS_DEBUG      +=  --coverage
+QMAKE_CXXFLAGS_DEBUG    +=  -g -O0 --coverage
+QMAKE_CXXFLAGS_DEBUG    +=  -Wall -Wextra -pedantic
+
+# set release build flags
+QMAKE_CXXFLAGS_RELEASE  +=  -O2
 
 # set executable name
 TARGET      =   phogro
