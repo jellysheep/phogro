@@ -6,13 +6,32 @@ ApplicationWindow {
     width: 800
     height: 600
 
-    SplitView {
-        id: splitView
+    Rectangle {
         anchors.fill: parent
-        orientation: Qt.Horizontal
 
-        ImageList {
-            id: imageList
+        gradient: Gradient {
+            GradientStop {
+                position: 0.00;
+                color: "#ffffff";
+            }
+            GradientStop {
+                position: 0.72;
+                color: "#c0c0c0";
+            }
+            GradientStop {
+                position: 1.00;
+                color: "#e6e6e6";
+            }
+        }
+
+        SplitView {
+            id: splitView
+            anchors.fill: parent
+            orientation: Qt.Horizontal
+
+            ImageList {
+                id: imageList
+            }
         }
     }
 }

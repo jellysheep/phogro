@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtGraphicalEffects 1.0
 
 Rectangle {
     anchors.fill: parent.Center
@@ -9,26 +10,25 @@ Rectangle {
     property real imageBorderWidth: 2
     property real imageBoxWidth: imageWidth + 2*imageMargin
     property real imageBoxHeight: imageHeight + 2*imageMargin
+    color: "transparent"
 
     Component {
         id: imageDelegate
         Item {
-
             width: imageBoxWidth
             height: imageBoxHeight
             anchors.verticalCenter: parent.verticalCenter
 
-            Rectangle {
-                x: imageMargin-imageBorderWidth
-                y: imageMargin-imageBorderWidth
-                width: imageWidth + 2*imageBorderWidth
-                height: imageHeight + 2*imageBorderWidth
-                border.color:
-                    parent.ListView.isCurrentItem ? "black" : "transparent"
-                border.width: imageBorderWidth
+            RectangularGlow {
+                anchors.fill: image
+                color: parent.ListView.isCurrentItem
+                       ? "#90000000" : "#50000000"
+                glowRadius: 30
+                spread: 0.1
             }
 
             Image {
+                id: image
                 x: imageMargin
                 y: imageMargin
                 width: imageWidth
